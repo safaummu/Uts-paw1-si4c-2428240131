@@ -1,8 +1,8 @@
 function SimpanBarang() {
-    const namaBarang = document.getElementById('namaBarang').value.trim();
+    const namaBarang = document.getElementById('namaBarang').value;
     const jumlahBarang = document.getElementById('jumlahBarang').value;
-    const keterangan = document.getElementById('keterangan').value.trim();
-    const imageUrl = document.getElementById('imageUrl').value.trim();
+    const keterangan = document.getElementById('keterangan').value;
+    const imageUrl = document.getElementById('imageUrl').value;
 
     if (!namaBarang || !jumlahBarang || !keterangan) {
         alert('Semua field harus diisi!');
@@ -14,14 +14,14 @@ function SimpanBarang() {
         namaBarang: namaBarang,
         jumlahBarang: parseInt(jumlahBarang),
         keterangan: keterangan,
-        imageUrl: imageUrl || 'https://via.placeholder.com/200'
+        imageUrl: imageUrl
     };
 
     let daftarBarang = JSON.parse(localStorage.getItem('daftarBarang')) || [];
     daftarBarang.push(barang);
     localStorage.setItem('daftarBarang', JSON.stringify(daftarBarang));
 
-    // Reset form
+    
     document.getElementById('namaBarang').value = '';
     document.getElementById('jumlahBarang').value = '';
     document.getElementById('keterangan').value = '';
