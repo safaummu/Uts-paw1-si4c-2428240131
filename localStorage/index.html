@@ -4,41 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>daftar belanja</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1><i class="fas fa-box"></i> daftar bekanja</h1>
+    <div class="container  mt-5">
+            <h1><i class="mb-4"></i> daftar belanja</h1>
         </div>
 
         <!-- Input -->
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="form-container">
-                    <h2><i class="fas fa-plus-circle"></i> Tambah Barang Baru</h2>
-                    <form id="formBarang">
-                        <div class="mb-3">
-                            <label for="namaBarang" class="form-label">Nama Barang</label>
-                            <input type="text" class="form-control" id="namaBarang" placeholder="Masukkan nama barang" required>
-                        </div>
+        <div class="card mb-3">
+            <div class="mb-3">
+                <label for="namaBarang" class="form-label">Nama Barang</label>
+                <input type="text" class="form-control" id="namaBarang" placeholder="Masukkan nama barang" required>
+            </div>
 
-                        <div class="mb-3">
-                            <label for="jumlahBarang" class="form-label">Jumlah</label>
-                            <input type="number" class="form-control" id="jumlahBarang" placeholder="Masukkan jumlah barang" min="1" required>
-                        </div>
+            <div class="mb-3">
+                <label for="jumlahBarang" class="form-label">Jumlah</label>
+                 <input type="number" class="form-control" id="jumlahBarang" placeholder="Masukkan jumlah barang" min="1" required>
+            </div>
 
-                        <div class="mb-3">
-                            <label for="keterangan" class="form-label">Keterangan</label>
-                            <textarea class="form-control" id="keterangan" rows="3" placeholder="Masukkan keterangan barang" required></textarea>
-                        </div>
+            <div class="mb-3">
+                <label for="keterangan" class="form-label">Keterangan</label>
+                <textarea class="form-control" id="keterangan" rows="3" placeholder="Masukkan keterangan barang" required></textarea>
+            </div>
 
-                        <button type="submit" class="btn-simpan">
-                            <i class="fas fa-save"></i> Simpan Barang
-                        </button>
+            <button class="btn btn-primary" onclick="SimpanBarang()">Simpan Barang</button>
                     </form>
                 </div>
             </div>
         </div>
+        
 </body>
 </html>
 
